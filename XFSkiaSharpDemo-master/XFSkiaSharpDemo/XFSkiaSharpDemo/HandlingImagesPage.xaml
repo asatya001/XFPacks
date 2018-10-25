@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSkiaSharpDemo.HandlingImagesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    Title="Handling Images">
+
+    <Grid RowSpacing="0">
+
+        <Button
+            x:Name="PickImageEffectButton"
+            Grid.Row="0"
+            BackgroundColor="DodgerBlue"
+            Clicked="PickImageEffectButton_Clicked"
+            HorizontalOptions="FillAndExpand"
+            Text="Pick an Image Effect"
+            TextColor="White" />
+
+        <Label
+            x:Name="EffectNameLabel"
+            Grid.Row="1"
+            HorizontalTextAlignment="Center"
+            Text="Default Image (No effect)"
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center" />
+
+        <forms:SKCanvasView
+            x:Name="SkCanvasView"
+            Grid.Row="2"
+            PaintSurface="SkCanvasView_OnPaintSurface" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+    </Grid>
+
+</ContentPage>

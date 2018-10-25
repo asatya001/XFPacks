@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XFSkiaSharpDemo.DrawingShapesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+    Title="Drawing Shapes">
+
+    <Grid Padding="5" RowSpacing="5">
+
+        <Button
+            x:Name="PickShapeToDrawButton"
+            Grid.Row="0"
+            BackgroundColor="DodgerBlue"
+            Clicked="PickShapeToDrawButton_Clicked"
+            HorizontalOptions="FillAndExpand"
+            Text="Pick a Shape to Draw"
+            TextColor="White" />
+
+        <Label
+            x:Name="DrawingShapeNameLabel"
+            Grid.Row="1"
+            FontSize="Small"
+            HorizontalTextAlignment="Center"
+            Text="Drawing Circle"
+            VerticalOptions="CenterAndExpand"
+            VerticalTextAlignment="Center" />
+
+        <forms:SKCanvasView
+            x:Name="SkCanvasView"
+            Grid.Row="2"
+            PaintSurface="SkCanvasView_OnPaintSurface" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+    </Grid>
+</ContentPage>
